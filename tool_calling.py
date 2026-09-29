@@ -534,3 +534,14 @@ else:
     print("Final answer:")
 
     print(assistant_message.content)
+
+#output: python tool_calling.py 
+# Model response:
+# ChatCompletion(id='chatcmpl-6d16e9ee-08f2-4165-9446-e030b76ccd78', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=[ChatCompletionMessageFunctionToolCall(id='fc_5d501b55-c3bd-4a4c-b6cf-4e9088161f5e', function=Function(arguments='{"city":"Karachi"}', name='get_time'), type='function')], reasoning='User asks: "What time is it in Karachi?" We need to get current time for city Karachi using get_time function. We\'ll call it.'))], created=1790683425, model='openai/gpt-oss-120b', object='chat.completion', metadata=None, moderation=None, service_tier='on_demand', system_fingerprint='fp_8655ddce88', usage=CompletionUsage(completion_tokens=58, prompt_tokens=183, total_tokens=241, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=None, reasoning_tokens=30, rejected_prediction_tokens=None, text_tokens=None), prompt_tokens_details=None, queue_time=0.242906089, prompt_time=0.007779483, completion_time=0.121259627, total_time=0.12903911), usage_breakdown=None, x_groq={'id': 'req_01m3pgsa80e7s86jm4gdpxzv3s', 'seed': 1701511074})
+# Model message:
+# ChatCompletionMessage(content=None, refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=[ChatCompletionMessageFunctionToolCall(id='fc_5d501b55-c3bd-4a4c-b6cf-4e9088161f5e', function=Function(arguments='{"city":"Karachi"}', name='get_time'), type='function')], reasoning='User asks: "What time is it in Karachi?" We need to get current time for city Karachi using get_time function. We\'ll call it.')
+# AI selected tool: get_time
+# Arguments: {'city': 'Karachi'}
+# Tool result: The current time in Karachi is 3:30 PM.
+# Final answer:
+# The current time in Karachi is **3:30 PM**.
